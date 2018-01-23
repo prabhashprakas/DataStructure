@@ -12,15 +12,20 @@ public class LinkedList<T> {
 	
 	public void printList() {
 		Node<T> temp = head; 
-		while(temp.hasNext()) {
+		while(temp != null) {
 			System.out.println(temp.getData());
 			temp = temp.getNext(); 
 		}
 	}
 	
-	public void add(T data) {
+	public void append(T data) {
 		if(head == null) {
-			
+			head = new Node<T>(data); 
+			this.last = head; 
+		}
+		else {
+			this.last.setNext(new Node<T>(data));
+			last = last.getNext(); 
 		}
 	}
 

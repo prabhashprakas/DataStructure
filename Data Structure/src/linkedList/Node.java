@@ -3,12 +3,9 @@ package linkedList;
 public class Node<T> {
 	private T data; 
 	private Node<T> next; 
-	Node() {
-		this.setNext(next);
-	}
 	Node(T data) {
 		this.setData(data);
-		this.setNext(next);
+		this.setNext(null);
 	}
 	public T getData() {
 		return data;
