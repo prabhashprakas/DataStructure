@@ -10,6 +10,17 @@ public class LinkedList<T> {
 		head = last = null; 
 	}
 	
+	public void addAtStart(T data) {
+		if(head == null) {
+			this.append(data);
+		}
+		else { 
+			Node<T> node = new Node<>(data); 
+			node.setNext(head);
+			head = node; 
+		}
+	}
+	
 	public void printList() {
 		Node<T> temp = head; 
 		while(temp != null) {
